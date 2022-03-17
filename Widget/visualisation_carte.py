@@ -38,7 +38,7 @@ class Ui_MainWindow(object):
 "border:1px solid black;\n"
 "}")
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap(":/images/nature-yuh.png"))
+        self.label_2.setPixmap(QtGui.QPixmap(":/img/Côte_d\'Ivoire.svg.png"))
         self.label_2.setScaledContents(True)
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(self.frame_2)
@@ -165,7 +165,7 @@ class Ui_MainWindow(object):
 "border:none;\n"
 "}")
         self.label_22.setText("")
-        self.label_22.setPixmap(QtGui.QPixmap(":/images/images__3_-removebg-preview.png"))
+        self.label_22.setPixmap(QtGui.QPixmap(":/img/images__3_-removebg-preview.png"))
         self.label_22.setScaledContents(True)
         self.label_22.setObjectName("label_22")
         self.label_23 = QtWidgets.QLabel(self.frame_2)
@@ -174,7 +174,7 @@ class Ui_MainWindow(object):
 "border:none;\n"
 "}")
         self.label_23.setText("")
-        self.label_23.setPixmap(QtGui.QPixmap(":/images/Coat_of_arms_of_Côte_d\'Ivoire_(1997-2001_variant).svg 2.png"))
+        self.label_23.setPixmap(QtGui.QPixmap(":/img/Côte_d\'Ivoire.svg.png"))
         self.label_23.setScaledContents(True)
         self.label_23.setObjectName("label_23")
         self.label_22.raise_()
@@ -212,7 +212,7 @@ class Ui_MainWindow(object):
 "}")
         self.pushButton.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/images/imgCapture.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/img/imgCapture.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton.setIcon(icon)
         self.pushButton.setIconSize(QtCore.QSize(100, 100))
         self.pushButton.setObjectName("pushButton")

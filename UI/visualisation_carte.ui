@@ -69,7 +69,7 @@ border:1px solid black;
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="ressources.qrc">:/images/nature-yuh.png</pixmap>
+       <pixmap resource="../static/ressources.qrc">:/img/Côte_d'Ivoire.svg.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -443,7 +443,7 @@ border:none;
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="ressources.qrc">:/images/images__3_-removebg-preview.png</pixmap>
+       <pixmap resource="../static/ressources.qrc">:/img/images__3_-removebg-preview.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -467,7 +467,7 @@ border:none;
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="ressources.qrc">:/images/Coat_of_arms_of_Côte_d'Ivoire_(1997-2001_variant).svg 2.png</pixmap>
+       <pixmap resource="../static/ressources.qrc">:/img/Côte_d'Ivoire.svg.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -530,8 +530,8 @@ border-radius:20px
       <string/>
      </property>
      <property name="icon">
-      <iconset resource="ressources.qrc">
-       <normaloff>:/images/imgCapture.png</normaloff>:/images/imgCapture.png</iconset>
+      <iconset resource="../static/ressources.qrc">
+       <normaloff>:/img/imgCapture.png</normaloff>:/img/imgCapture.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -555,7 +555,7 @@ border-radius:20px
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="ressources.qrc"/>
+  <include location="../static/ressources.qrc"/>
  </resources>
  <connections/>
 </ui>
