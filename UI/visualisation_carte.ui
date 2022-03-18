@@ -17,7 +17,7 @@
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>0</x>
       <y>0</y>
       <width>971</width>
       <height>581</height>
@@ -32,8 +32,8 @@
     <widget class="QFrame" name="frame_2">
      <property name="geometry">
       <rect>
-       <x>200</x>
-       <y>70</y>
+       <x>250</x>
+       <y>90</y>
        <width>561</width>
        <height>311</height>
       </rect>
@@ -69,7 +69,7 @@ border:1px solid black;
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="../static/ressources.qrc">:/img/Côte_d'Ivoire.svg.png</pixmap>
+       <pixmap>:/img/Côte_d'Ivoire.svg.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -98,7 +98,7 @@ border:none;
        <rect>
         <x>190</x>
         <y>110</y>
-        <width>201</width>
+        <width>131</width>
         <height>20</height>
        </rect>
       </property>
@@ -443,7 +443,7 @@ border:none;
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="../static/ressources.qrc">:/img/images__3_-removebg-preview.png</pixmap>
+       <pixmap>:/img/images__3_-removebg-preview.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -467,7 +467,7 @@ border:none;
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="../static/ressources.qrc">:/img/Côte_d'Ivoire.svg.png</pixmap>
+       <pixmap>:/img/Côte_d'Ivoire.svg.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -499,8 +499,8 @@ border:none;
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>260</x>
-       <y>0</y>
+       <x>250</x>
+       <y>20</y>
        <width>541</width>
        <height>31</height>
       </rect>
@@ -512,8 +512,8 @@ border:none;
     <widget class="QPushButton" name="pushButton">
      <property name="geometry">
       <rect>
-       <x>450</x>
-       <y>450</y>
+       <x>470</x>
+       <y>480</y>
        <width>61</width>
        <height>61</height>
       </rect>
@@ -530,7 +530,7 @@ border-radius:20px
       <string/>
      </property>
      <property name="icon">
-      <iconset resource="../static/ressources.qrc">
+      <iconset>
        <normaloff>:/img/imgCapture.png</normaloff>:/img/imgCapture.png</iconset>
      </property>
      <property name="iconSize">
@@ -542,20 +542,8 @@ border-radius:20px
     </widget>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>966</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources>
-  <include location="../static/ressources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
