@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>991</width>
+    <width>1233</width>
     <height>672</height>
    </rect>
   </property>
@@ -19,8 +19,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>987</width>
-      <height>633</height>
+      <width>1241</width>
+      <height>661</height>
      </rect>
     </property>
     <property name="minimumSize">
@@ -32,6 +32,7 @@
     <property name="styleSheet">
      <string notr="true">background-color:lightblue;
 font:Arial 30 bold;
+
 </string>
     </property>
     <property name="tabPosition">
@@ -40,6 +41,337 @@ font:Arial 30 bold;
     <property name="currentIndex">
      <number>1</number>
     </property>
+    <property name="iconSize">
+     <size>
+      <width>50</width>
+      <height>50</height>
+     </size>
+    </property>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>liste</string>
+     </attribute>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>20</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:#d41c1c;
+color:white;
+font:Italic 16 bold;
+border-radius:9px
+}</string>
+      </property>
+      <property name="text">
+       <string>SUPPRIMER</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>20</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:#2ad482;
+color:white;
+font:Italic 16 bold;
+border-radius:9px
+}</string>
+      </property>
+      <property name="text">
+       <string>MODIFIER</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>70</y>
+        <width>1231</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: lightgrey;
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <property name="midLineWidth">
+       <number>0</number>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustIgnored</enum>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::ContiguousSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <property name="gridStyle">
+       <enum>Qt::DotLine</enum>
+      </property>
+      <property name="sortingEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="rowCount">
+       <number>18</number>
+      </property>
+      <property name="columnCount">
+       <number>9</number>
+      </property>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>19</number>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>134</number>
+      </attribute>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>ID</string>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+       <property name="background">
+        <color>
+         <red>225</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>NOM</string>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="background">
+        <color>
+         <red>100</red>
+         <green>218</green>
+         <blue>243</blue>
+        </color>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>PRENOM</string>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>DATE NAISSANCE</string>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>TAILLE</string>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>NATIONALITE</string>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>VALIDITE</string>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="background">
+        <color>
+         <red>112</red>
+         <green>238</green>
+         <blue>160</blue>
+        </color>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>MODIFIER</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+         <weight>75</weight>
+         <italic>true</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>SUPRIMER</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+         <weight>75</weight>
+         <italic>true</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <item row="0" column="0">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
+       <property name="flags">
+        <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>20</y>
+        <width>261</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+
+background-color:white;
+}</string>
+      </property>
+      <property name="placeholderText">
+       <string>Ajouter un element </string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>840</x>
+        <y>20</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:lightblue;
+color:white;
+font:Italic 16 bold;
+border-radius:9px;
+border:1px solid white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>1140</x>
+        <y>20</y>
+        <width>71</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:lightblue;
+color:white;
+font:Italic 16 bold;
+border-radius:9px;
+border:1px solid white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
     <widget class="QWidget" name="tab">
      <attribute name="title">
       <string>enregistrement</string>
@@ -49,7 +381,7 @@ font:Arial 30 bold;
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>1021</width>
+        <width>1231</width>
         <height>611</height>
        </rect>
       </property>
@@ -231,6 +563,7 @@ padding-left:15px;
         <string notr="true">QLineEdit{
 border-top-left-radius:12px;
 border-top-right-radius:12px;
+background-color:white;
 }</string>
        </property>
        <property name="placeholderText">
@@ -253,6 +586,7 @@ border-top-right-radius:12px;
         <string notr="true">QLineEdit{
 border-top-left-radius:12px;
 border-top-right-radius:12px;
+background-color:white;
 }</string>
        </property>
        <property name="placeholderText">
@@ -275,6 +609,7 @@ border-top-right-radius:12px;
         <string notr="true">QLineEdit{
 border-top-left-radius:12px;
 border-top-right-radius:12px;
+background-color:white;
 }</string>
        </property>
        <property name="placeholderText">
@@ -300,6 +635,7 @@ border-top-right-radius:12px;
         <string notr="true">QLineEdit{
 border-top-left-radius:12px;
 border-top-right-radius:12px;
+background-color:white;
 }</string>
        </property>
        <property name="placeholderText">
@@ -312,8 +648,8 @@ border-top-right-radius:12px;
       <widget class="QPushButton" name="btn_photo">
        <property name="geometry">
         <rect>
-         <x>50</x>
-         <y>540</y>
+         <x>1030</x>
+         <y>330</y>
          <width>131</width>
          <height>31</height>
         </rect>
@@ -342,7 +678,7 @@ border-radius:12px;
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
-background-color:red;
+background-color:#e34040;
 color:white;
 font:Italic 14 bold;
 border:2px solid white;
@@ -364,7 +700,7 @@ border-radius:12px;
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
-background-color:green;
+background-color:#30ff98;
 color:white;
 font:Italic 14 bold;
 border:2px solid white;
@@ -388,6 +724,7 @@ border-radius:12px;
         <string notr="true">QComboBox{
 border-top-left-radius:12px;
 border-top-right-radius:12px;
+background-color:white;
 }</string>
        </property>
        <property name="currentText">
@@ -456,6 +793,7 @@ padding-left:15px;
         <string notr="true">QLineEdit{
 border-top-left-radius:12px;
 border-top-right-radius:12px;
+background-color:white;
 }</string>
        </property>
        <property name="placeholderText">
@@ -470,7 +808,7 @@ border-top-right-radius:12px;
         <rect>
          <x>-20</x>
          <y>20</y>
-         <width>1001</width>
+         <width>1251</width>
          <height>51</height>
         </rect>
        </property>
@@ -483,12 +821,12 @@ shadow:12px;}</string>
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:600;&quot;&gt;PRODUCTION DE CARTE NATIONALE D'IDENTITE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_3">
+      <widget class="QLineEdit" name="affichLienPhoto">
        <property name="geometry">
         <rect>
-         <x>180</x>
-         <y>540</y>
-         <width>291</width>
+         <x>1000</x>
+         <y>300</y>
+         <width>191</width>
          <height>31</height>
         </rect>
        </property>
@@ -496,6 +834,8 @@ shadow:12px;}</string>
         <string notr="true">QLineEdit{
 
 border-top-right-radius:12px;
+border-top-left-radius:12px;
+background-color:white;
 }</string>
        </property>
       </widget>
@@ -512,6 +852,7 @@ border-top-right-radius:12px;
         <string notr="true">QDateEdit{
 border-top-left-radius:12px;
 border-top-right-radius:12px;
+background-color:white;
 }</string>
        </property>
        <property name="calendarPopup">
@@ -538,6 +879,7 @@ border-top-right-radius:12px;
         <string notr="true">QDateEdit{
 border-top-left-radius:12px;
 border-top-right-radius:12px;
+background-color:white;
 }</string>
        </property>
        <property name="calendarPopup">
@@ -551,225 +893,27 @@ border-top-right-radius:12px;
         </date>
        </property>
       </widget>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_2">
-     <attribute name="title">
-      <string>liste</string>
-     </attribute>
-     <widget class="QPushButton" name="pushButton_4">
-      <property name="geometry">
-       <rect>
-        <x>400</x>
-        <y>20</y>
-        <width>101</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton{
-background-color:red;
-color:white;
-font:Italic 16 bold;
-border-radius:9px
+      <widget class="QLabel" name="labPhoto">
+       <property name="geometry">
+        <rect>
+         <x>1030</x>
+         <y>100</y>
+         <width>121</width>
+         <height>161</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+border:1px solid white;
 }</string>
-      </property>
-      <property name="text">
-       <string>SUPPRIMER</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_5">
-      <property name="geometry">
-       <rect>
-        <x>510</x>
-        <y>20</y>
-        <width>101</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton{
-background-color:green;
-color:white;
-font:Italic 16 bold;
-border-radius:9px
-}</string>
-      </property>
-      <property name="text">
-       <string>MODIFIER</string>
-      </property>
-     </widget>
-     <widget class="QTableWidget" name="tableWidget">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>70</y>
-        <width>991</width>
-        <height>541</height>
-       </rect>
-      </property>
-      <property name="autoFillBackground">
-       <bool>true</bool>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: lightgrey;
-</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Panel</enum>
-      </property>
-      <property name="lineWidth">
-       <number>3</number>
-      </property>
-      <property name="midLineWidth">
-       <number>0</number>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QAbstractScrollArea::AdjustIgnored</enum>
-      </property>
-      <property name="alternatingRowColors">
-       <bool>true</bool>
-      </property>
-      <property name="selectionMode">
-       <enum>QAbstractItemView::ContiguousSelection</enum>
-      </property>
-      <property name="selectionBehavior">
-       <enum>QAbstractItemView::SelectColumns</enum>
-      </property>
-      <property name="gridStyle">
-       <enum>Qt::DotLine</enum>
-      </property>
-      <property name="sortingEnabled">
-       <bool>false</bool>
-      </property>
-      <property name="rowCount">
-       <number>18</number>
-      </property>
-      <property name="columnCount">
-       <number>7</number>
-      </property>
-      <attribute name="horizontalHeaderCascadingSectionResizes">
-       <bool>true</bool>
-      </attribute>
-      <attribute name="horizontalHeaderMinimumSectionSize">
-       <number>19</number>
-      </attribute>
-      <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>134</number>
-      </attribute>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <column>
+       </property>
        <property name="text">
-        <string>IMMATRICULATION</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Photo&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
+       <property name="scaledContents">
+        <bool>true</bool>
        </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>NOM</string>
-       </property>
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>PRENOM</string>
-       </property>
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>DATE NAISSANCE</string>
-       </property>
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>TAILLE</string>
-       </property>
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>NATIONALITE</string>
-       </property>
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>VALIDITE</string>
-       </property>
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="background">
-        <color>
-         <red>86</red>
-         <green>154</green>
-         <blue>51</blue>
-        </color>
-       </property>
-      </column>
-      <item row="0" column="0">
-       <property name="text">
-        <string/>
-       </property>
-       <property name="textAlignment">
-        <set>AlignCenter</set>
-       </property>
-       <property name="flags">
-        <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
-       </property>
-      </item>
+      </widget>
      </widget>
     </widget>
    </widget>
@@ -777,5 +921,86 @@ border-radius:9px
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>btn_annuler</sender>
+   <signal>clicked()</signal>
+   <receiver>nationalite</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>647</x>
+     <y>579</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>722</x>
+     <y>369</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_annuler</sender>
+   <signal>clicked()</signal>
+   <receiver>lieu</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>647</x>
+     <y>579</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>479</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_annuler</sender>
+   <signal>clicked()</signal>
+   <receiver>nom</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>647</x>
+     <y>579</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>169</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_annuler</sender>
+   <signal>clicked()</signal>
+   <receiver>prenom</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>647</x>
+     <y>579</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_annuler</sender>
+   <signal>clicked()</signal>
+   <receiver>taille</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>647</x>
+     <y>579</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>722</x>
+     <y>169</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
