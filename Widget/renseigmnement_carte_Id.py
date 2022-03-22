@@ -29,24 +29,24 @@ class Ui_MainWindow(object):
         self.listeEnregistrement.setObjectName("listeEnregistrement")
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
-        self.pushButton_4 = QtWidgets.QPushButton(self.tab_2)
-        self.pushButton_4.setGeometry(QtCore.QRect(320, 20, 101, 41))
-        self.pushButton_4.setStyleSheet("QPushButton{\n"
+        self.btn_delete = QtWidgets.QPushButton(self.tab_2)
+        self.btn_delete.setGeometry(QtCore.QRect(320, 20, 101, 41))
+        self.btn_delete.setStyleSheet("QPushButton{\n"
 "background-color:#d41c1c;\n"
 "color:white;\n"
 "font:Italic 16 bold;\n"
 "border-radius:9px\n"
 "}")
-        self.pushButton_4.setObjectName("pushButton_4")
-        self.pushButton_5 = QtWidgets.QPushButton(self.tab_2)
-        self.pushButton_5.setGeometry(QtCore.QRect(430, 20, 101, 41))
-        self.pushButton_5.setStyleSheet("QPushButton{\n"
+        self.btn_delete.setObjectName("btn_delete")
+        self.btn_update = QtWidgets.QPushButton(self.tab_2)
+        self.btn_update.setGeometry(QtCore.QRect(430, 20, 101, 41))
+        self.btn_update.setStyleSheet("QPushButton{\n"
 "background-color:#2ad482;\n"
 "color:white;\n"
 "font:Italic 16 bold;\n"
 "border-radius:9px\n"
 "}")
-        self.pushButton_5.setObjectName("pushButton_5")
+        self.btn_update.setObjectName("btn_update")
         self.tableWidget = QtWidgets.QTableWidget(self.tab_2)
         self.tableWidget.setGeometry(QtCore.QRect(0, 70, 1231, 561))
         self.tableWidget.setAutoFillBackground(True)
@@ -132,35 +132,34 @@ class Ui_MainWindow(object):
         self.tableWidget.horizontalHeader().setCascadingSectionResizes(True)
         self.tableWidget.horizontalHeader().setDefaultSectionSize(134)
         self.tableWidget.horizontalHeader().setMinimumSectionSize(19)
-        self.lineEdit = QtWidgets.QLineEdit(self.tab_2)
-        self.lineEdit.setGeometry(QtCore.QRect(570, 20, 261, 41))
-        self.lineEdit.setStyleSheet("QLineEdit{\n"
+        self.name_search = QtWidgets.QLineEdit(self.tab_2)
+        self.name_search.setGeometry(QtCore.QRect(570, 20, 261, 41))
+        self.name_search.setStyleSheet("QLineEdit{\n"
 "\n"
 "background-color:white;\n"
 "}")
-        self.lineEdit.setObjectName("lineEdit")
-        self.pushButton = QtWidgets.QPushButton(self.tab_2)
-        self.pushButton.setGeometry(QtCore.QRect(840, 20, 81, 41))
-        self.pushButton.setStyleSheet("QPushButton{\n"
+        self.name_search.setObjectName("name_search")
+        self.btn_search = QtWidgets.QPushButton(self.tab_2)
+        self.btn_search.setGeometry(QtCore.QRect(840, 20, 81, 41))
+        self.btn_search.setStyleSheet("QPushButton{\n"
+"background-color:lightblue;\n"
+"color:white;\n"
+"font:Italic 28 bold;\n"
+"border-radius:9px;\n"
+"border:1px solid white;\n"
+"}")
+        self.btn_search.setObjectName("btn_search")
+        self.btn_refresh = QtWidgets.QPushButton(self.tab_2)
+        self.btn_refresh.setGeometry(QtCore.QRect(1140, 20, 71, 41))
+        self.btn_refresh.setStyleSheet("QPushButton{\n"
 "background-color:lightblue;\n"
 "color:white;\n"
 "font:Italic 16 bold;\n"
 "border-radius:9px;\n"
 "border:1px solid white;\n"
 "}")
-        self.pushButton.setText("")
-        self.pushButton.setObjectName("pushButton")
-        self.pushButton_2 = QtWidgets.QPushButton(self.tab_2)
-        self.pushButton_2.setGeometry(QtCore.QRect(1140, 20, 71, 41))
-        self.pushButton_2.setStyleSheet("QPushButton{\n"
-"background-color:lightblue;\n"
-"color:white;\n"
-"font:Italic 16 bold;\n"
-"border-radius:9px;\n"
-"border:1px solid white;\n"
-"}")
-        self.pushButton_2.setText("")
-        self.pushButton_2.setObjectName("pushButton_2")
+        self.btn_refresh.setIconSize(QtCore.QSize(35, 35))
+        self.btn_refresh.setObjectName("btn_refresh")
         self.listeEnregistrement.addTab(self.tab_2, "")
         self.tab = QtWidgets.QWidget()
         self.tab.setObjectName("tab")
@@ -390,7 +389,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.listeEnregistrement.setCurrentIndex(1)
+        self.listeEnregistrement.setCurrentIndex(0)
         self.comboBoxSexe.setCurrentIndex(0)
         self.btn_annuler.clicked.connect(self.nationalite.clear) # type: ignore
         self.btn_annuler.clicked.connect(self.lieu.clear) # type: ignore
@@ -402,8 +401,8 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.pushButton_4.setText(_translate("MainWindow", "SUPPRIMER"))
-        self.pushButton_5.setText(_translate("MainWindow", "MODIFIER"))
+        self.btn_delete.setText(_translate("MainWindow", "SUPPRIMER"))
+        self.btn_update.setText(_translate("MainWindow", "MODIFIER"))
         self.tableWidget.setSortingEnabled(False)
         item = self.tableWidget.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "ID"))
@@ -426,7 +425,9 @@ class Ui_MainWindow(object):
         __sortingEnabled = self.tableWidget.isSortingEnabled()
         self.tableWidget.setSortingEnabled(False)
         self.tableWidget.setSortingEnabled(__sortingEnabled)
-        self.lineEdit.setPlaceholderText(_translate("MainWindow", "Ajouter un element "))
+        self.name_search.setPlaceholderText(_translate("MainWindow", "Ajouter un element "))
+        self.btn_search.setText(_translate("MainWindow", "search"))
+        self.btn_refresh.setText(_translate("MainWindow", "rafraichie"))
         self.listeEnregistrement.setTabText(self.listeEnregistrement.indexOf(self.tab_2), _translate("MainWindow", "liste"))
         self.label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:18pt; font-weight:600;\">Nom</span></p></body></html>"))
         self.label_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:18pt; font-weight:600;\">Prenom</span></p></body></html>"))
@@ -443,7 +444,7 @@ class Ui_MainWindow(object):
         self.btn_annuler.setText(_translate("MainWindow", "Annuler"))
         self.btn_valider1.setText(_translate("MainWindow", "Valider"))
         self.comboBoxSexe.setCurrentText(_translate("MainWindow", "Masculin"))
-        self.comboBoxSexe.setPlaceholderText(_translate("MainWindow", "choisir"))
+        self.comboBoxSexe.setProperty("placeholderText", _translate("MainWindow", "choisir"))
         self.comboBoxSexe.setItemText(0, _translate("MainWindow", "Masculin"))
         self.comboBoxSexe.setItemText(1, _translate("MainWindow", "Feminin"))
         self.comboBoxSexe.setItemText(2, _translate("MainWindow", "Autre"))
@@ -452,6 +453,7 @@ class Ui_MainWindow(object):
         self.label_7.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:24pt; font-weight:600;\">PRODUCTION DE CARTE NATIONALE D\'IDENTITE</span></p></body></html>"))
         self.labPhoto.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">Photo</p></body></html>"))
         self.listeEnregistrement.setTabText(self.listeEnregistrement.indexOf(self.tab), _translate("MainWindow", "enregistrement"))
+import ressources_rc
 
 
 if __name__ == "__main__":
