@@ -18,6 +18,7 @@ class AccountPage(QMainWindow,Ui_MainWindow):
         self.btn_annuler.clicked.connect(self.annuler)
         self.btn_delete.clicked.connect(self.delete)
         self.btn_update.clicked.connect(self.update)
+        self.btn_search.clicked.connect(self.search)
 
         #self.listeEnregistrement.clicked.connect(self.listers)
         #self.buttonErase.clicked.connect(self.deleteLater)
@@ -37,8 +38,7 @@ class AccountPage(QMainWindow,Ui_MainWindow):
         file_name=QFileDialog.getOpenFileName(self,'Open File','Users/imac-05/Desktop')
         self.labPhoto.setPixmap(QPixmap(file_name[0]))
         self.affichLienPhoto.setText(file_name[0])
-
-        print(file_name) 
+        return file_name[0]
     
     def valider(self):
         
@@ -48,11 +48,11 @@ class AccountPage(QMainWindow,Ui_MainWindow):
             QMessageBox.about(self, "Title", " Taille en numerique!")
         
         else:
-            file_name=QFileDialog.getOpenFileName(self,'Open File','Users/imac-05/Desktop')
-            self.labPhoto.setPixmap(QPixmap(file_name[0]))
-            vv=self.affichLienPhoto.setText(file_name[0])
+            
+            print(self.Get_photo())
 
             connexion=sqlite3.connect("carto.db")
+            
             dicto={
             "nom": self.nom.text(),
             "prenom": self.prenom.text(),
@@ -62,7 +62,7 @@ class AccountPage(QMainWindow,Ui_MainWindow):
             "sexe":self.comboBoxSexe.currentText(),
             "nationalite": self.nationalite.text(),
             "validite": self.Validite.text(),
-            "photo":  vv
+            "photo":  self.Get_photo()
         
             }
                 
@@ -78,13 +78,14 @@ class AccountPage(QMainWindow,Ui_MainWindow):
                 sexe text,
                 nationalite text,
                 validite text,
-                photo text
+                photo file
                 
             )""")
 
 
             #--------enregistrement des element dans la base de donnees---------- 
-            c.execute("INSERT INTO carta VALUES(:nom, :prenom, :date_naissance, :lieu_naissance,  :taille, :sexe, :nationalie, :validite, :photo)", dicto)
+            c.execute("INSERT INTO carta VALUES(:nom, :prenom, :date_naissance, :lieu_naissance,  :taille, :sexe, :nationalite, :validite, :photo)", dicto)
+            QMessageBox.about(self,"validate","succès d'enregistrement")
             
             #---------ajout dans la base de donnees-----
             connexion.commit()
@@ -145,7 +146,7 @@ class AccountPage(QMainWindow,Ui_MainWindow):
         
         d=self.nom.text()
         
-        requete=''' SELECT FROM carta WHERE nom=?'''
+        requete=''' DELETE FROM carta WHERE nom=?'''
         c.execute(requete,d)
         
         connexion.commit()
@@ -172,7 +173,7 @@ class AccountPage(QMainWindow,Ui_MainWindow):
         
         connexion_db=sqlite3.connect("carto.db")
         c = connexion_db.cursor()
-        command="""SELECT nom,prenom,date_naissance,lieu_naissance,taille,sexe,nationlite,validite FROM carta"""
+        command="""SELECT nom,prenom,date_naissance,lieu_naissance,taille,sexe,nationalite,validite FROM carta"""
         resultat=c.execute(command)
         self.tableWidget.setRowCount(0)
         for row_number,row_data in enumerate(resultat):
