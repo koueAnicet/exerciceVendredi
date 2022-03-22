@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import QMainWindow, QApplication,QFileSystemModel,QFileDialog,QMessageBox,QTableWidgetItem
 from Widget.renseigmnement_carte_Id import Ui_MainWindow
 from PyQt5.QtGui import QPixmap
-from email.mime.text import MIMEText
+#from email.mime.text import MIMEText
 import smtplib
 import sqlite3
 
