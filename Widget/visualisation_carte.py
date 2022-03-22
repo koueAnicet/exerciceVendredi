@@ -18,12 +18,15 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.frame = QtWidgets.QFrame(self.centralwidget)
-        self.frame.setGeometry(QtCore.QRect(10, 0, 971, 581))
+        self.frame.setGeometry(QtCore.QRect(0, 0, 971, 581))
+        self.frame.setStyleSheet("QFrame{\n"
+"background-color:lightgrey;}\n"
+"")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
         self.frame_2 = QtWidgets.QFrame(self.frame)
-        self.frame_2.setGeometry(QtCore.QRect(200, 70, 561, 311))
+        self.frame_2.setGeometry(QtCore.QRect(250, 90, 561, 311))
         self.frame_2.setStyleSheet("QFrame{\n"
 "background:lightyellow;\n"
 "border:2px solid;\n"
@@ -31,37 +34,37 @@ class Ui_MainWindow(object):
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
-        self.label_2 = QtWidgets.QLabel(self.frame_2)
-        self.label_2.setGeometry(QtCore.QRect(20, 80, 121, 141))
-        self.label_2.setStyleSheet("QLabel{\n"
+        self.setPhotoLabel = QtWidgets.QLabel(self.frame_2)
+        self.setPhotoLabel.setGeometry(QtCore.QRect(20, 80, 121, 141))
+        self.setPhotoLabel.setStyleSheet("QLabel{\n"
 "border-radius:0px;\n"
 "border:1px solid black;\n"
 "}")
-        self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap(":/img/Côte_d\'Ivoire.svg.png"))
-        self.label_2.setScaledContents(True)
-        self.label_2.setObjectName("label_2")
-        self.label_3 = QtWidgets.QLabel(self.frame_2)
-        self.label_3.setGeometry(QtCore.QRect(190, 70, 201, 21))
-        self.label_3.setStyleSheet("QLabel{\n"
+        self.setPhotoLabel.setText("")
+        self.setPhotoLabel.setPixmap(QtGui.QPixmap(":/img/Côte_d\'Ivoire.svg.png"))
+        self.setPhotoLabel.setScaledContents(True)
+        self.setPhotoLabel.setObjectName("setPhotoLabel")
+        self.setNom = QtWidgets.QLabel(self.frame_2)
+        self.setNom.setGeometry(QtCore.QRect(190, 70, 201, 21))
+        self.setNom.setStyleSheet("QLabel{\n"
 "border:none;\n"
 "}")
-        self.label_3.setObjectName("label_3")
-        self.label_4 = QtWidgets.QLabel(self.frame_2)
-        self.label_4.setGeometry(QtCore.QRect(190, 110, 201, 20))
-        self.label_4.setStyleSheet("QLabel{\n"
+        self.setNom.setObjectName("setNom")
+        self.setPrenom = QtWidgets.QLabel(self.frame_2)
+        self.setPrenom.setGeometry(QtCore.QRect(190, 110, 131, 20))
+        self.setPrenom.setStyleSheet("QLabel{\n"
 "border:none;\n"
 "}")
-        self.label_4.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.label_4.setObjectName("label_4")
+        self.setPrenom.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.setPrenom.setObjectName("setPrenom")
         self.label_5 = QtWidgets.QLabel(self.frame_2)
-        self.label_5.setGeometry(QtCore.QRect(190, 210, 60, 16))
+        self.label_5.setGeometry(QtCore.QRect(190, 210, 51, 16))
         self.label_5.setStyleSheet("QLabel{\n"
 "border:none;\n"
 "}")
         self.label_5.setObjectName("label_5")
         self.label_6 = QtWidgets.QLabel(self.frame_2)
-        self.label_6.setGeometry(QtCore.QRect(260, 210, 51, 16))
+        self.label_6.setGeometry(QtCore.QRect(270, 210, 41, 16))
         self.label_6.setStyleSheet("QLabel{\n"
 "border:none;\n"
 "}")
@@ -79,13 +82,13 @@ class Ui_MainWindow(object):
 "}")
         self.label_8.setObjectName("label_8")
         self.label_9 = QtWidgets.QLabel(self.frame_2)
-        self.label_9.setGeometry(QtCore.QRect(190, 230, 121, 21))
+        self.label_9.setGeometry(QtCore.QRect(190, 260, 121, 21))
         self.label_9.setStyleSheet("QLabel{\n"
 "border:none;\n"
 "}")
         self.label_9.setObjectName("label_9")
         self.label_12 = QtWidgets.QLabel(self.frame_2)
-        self.label_12.setGeometry(QtCore.QRect(330, 230, 60, 16))
+        self.label_12.setGeometry(QtCore.QRect(380, 240, 60, 16))
         self.label_12.setStyleSheet("QLabel{\n"
 "border:none;\n"
 "}")
@@ -117,42 +120,42 @@ class Ui_MainWindow(object):
 "}")
         self.label_11.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.label_11.setObjectName("label_11")
-        self.label_15 = QtWidgets.QLabel(self.frame_2)
-        self.label_15.setGeometry(QtCore.QRect(190, 190, 60, 16))
-        self.label_15.setStyleSheet("QLabel{\n"
+        self.setSexe = QtWidgets.QLabel(self.frame_2)
+        self.setSexe.setGeometry(QtCore.QRect(190, 190, 60, 16))
+        self.setSexe.setStyleSheet("QLabel{\n"
 "border:none;\n"
 "}")
-        self.label_15.setObjectName("label_15")
-        self.label_16 = QtWidgets.QLabel(self.frame_2)
-        self.label_16.setGeometry(QtCore.QRect(260, 190, 51, 16))
-        self.label_16.setStyleSheet("QLabel{\n"
+        self.setSexe.setObjectName("setSexe")
+        self.setTaille = QtWidgets.QLabel(self.frame_2)
+        self.setTaille.setGeometry(QtCore.QRect(270, 190, 51, 20))
+        self.setTaille.setStyleSheet("QLabel{\n"
 "border:none;\n"
 "}")
-        self.label_16.setObjectName("label_16")
-        self.label_17 = QtWidgets.QLabel(self.frame_2)
-        self.label_17.setGeometry(QtCore.QRect(190, 150, 201, 16))
-        self.label_17.setStyleSheet("QLabel{\n"
+        self.setTaille.setObjectName("setTaille")
+        self.setDateNaissance = QtWidgets.QLabel(self.frame_2)
+        self.setDateNaissance.setGeometry(QtCore.QRect(190, 150, 201, 16))
+        self.setDateNaissance.setStyleSheet("QLabel{\n"
 "border:none;\n"
 "}")
-        self.label_17.setObjectName("label_17")
+        self.setDateNaissance.setObjectName("setDateNaissance")
         self.label_18 = QtWidgets.QLabel(self.frame_2)
         self.label_18.setGeometry(QtCore.QRect(320, 70, 121, 20))
         self.label_18.setStyleSheet("QLabel{\n"
 "border:none;\n"
 "}")
         self.label_18.setObjectName("label_18")
-        self.label_19 = QtWidgets.QLabel(self.frame_2)
-        self.label_19.setGeometry(QtCore.QRect(40, 260, 81, 20))
-        self.label_19.setStyleSheet("QLabel{\n"
+        self.setNationalite = QtWidgets.QLabel(self.frame_2)
+        self.setNationalite.setGeometry(QtCore.QRect(40, 260, 81, 20))
+        self.setNationalite.setStyleSheet("QLabel{\n"
 "border:none;\n"
 "}")
-        self.label_19.setObjectName("label_19")
-        self.label_20 = QtWidgets.QLabel(self.frame_2)
-        self.label_20.setGeometry(QtCore.QRect(390, 230, 91, 16))
-        self.label_20.setStyleSheet("QLabel{\n"
+        self.setNationalite.setObjectName("setNationalite")
+        self.setValidite = QtWidgets.QLabel(self.frame_2)
+        self.setValidite.setGeometry(QtCore.QRect(450, 240, 91, 16))
+        self.setValidite.setStyleSheet("QLabel{\n"
 "border:none;\n"
 "}")
-        self.label_20.setObjectName("label_20")
+        self.setValidite.setObjectName("setValidite")
         self.label_21 = QtWidgets.QLabel(self.frame_2)
         self.label_21.setGeometry(QtCore.QRect(440, 70, 111, 20))
         self.label_21.setStyleSheet("QLabel{\n"
@@ -177,10 +180,16 @@ class Ui_MainWindow(object):
         self.label_23.setPixmap(QtGui.QPixmap(":/img/Côte_d\'Ivoire.svg.png"))
         self.label_23.setScaledContents(True)
         self.label_23.setObjectName("label_23")
+        self.setLieuNaissance = QtWidgets.QLabel(self.frame_2)
+        self.setLieuNaissance.setGeometry(QtCore.QRect(190, 240, 141, 16))
+        self.setLieuNaissance.setStyleSheet("QLabel{\n"
+"border:none;\n"
+"}")
+        self.setLieuNaissance.setObjectName("setLieuNaissance")
         self.label_22.raise_()
-        self.label_2.raise_()
-        self.label_3.raise_()
-        self.label_4.raise_()
+        self.setPhotoLabel.raise_()
+        self.setNom.raise_()
+        self.setPrenom.raise_()
         self.label_5.raise_()
         self.label_6.raise_()
         self.label_7.raise_()
@@ -191,19 +200,20 @@ class Ui_MainWindow(object):
         self.label_14.raise_()
         self.label_10.raise_()
         self.label_11.raise_()
-        self.label_15.raise_()
-        self.label_16.raise_()
-        self.label_17.raise_()
+        self.setSexe.raise_()
+        self.setTaille.raise_()
+        self.setDateNaissance.raise_()
         self.label_18.raise_()
-        self.label_19.raise_()
-        self.label_20.raise_()
+        self.setNationalite.raise_()
+        self.setValidite.raise_()
         self.label_21.raise_()
         self.label_23.raise_()
+        self.setLieuNaissance.raise_()
         self.label = QtWidgets.QLabel(self.frame)
-        self.label.setGeometry(QtCore.QRect(260, 0, 541, 31))
+        self.label.setGeometry(QtCore.QRect(250, 20, 541, 31))
         self.label.setObjectName("label")
         self.pushButton = QtWidgets.QPushButton(self.frame)
-        self.pushButton.setGeometry(QtCore.QRect(450, 450, 61, 61))
+        self.pushButton.setGeometry(QtCore.QRect(530, 470, 61, 61))
         self.pushButton.setStyleSheet("QPushButton{\n"
 "background-color:black;\n"
 "color:white;\n"
@@ -217,10 +227,6 @@ class Ui_MainWindow(object):
         self.pushButton.setIconSize(QtCore.QSize(100, 100))
         self.pushButton.setObjectName("pushButton")
         MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 966, 21))
-        self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
@@ -231,8 +237,8 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label_3.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">KOUE</span></p></body></html>"))
-        self.label_4.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">ANICET</span></p></body></html>"))
+        self.setNom.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">KOUE</span></p></body></html>"))
+        self.setPrenom.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">ANICET</span></p></body></html>"))
         self.label_5.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt;\">Sexe</span></p></body></html>"))
         self.label_6.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt;\">Taille</span></p></body></html>"))
         self.label_7.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt;\">Date de naissance</span></p></body></html>"))
@@ -243,15 +249,15 @@ class Ui_MainWindow(object):
         self.label_14.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600;\">CARTE NATIONALE D\'IDENTITE</span></p></body></html>"))
         self.label_10.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt;\">Nom</span></p></body></html>"))
         self.label_11.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt;\">Prenom</span></p></body></html>"))
-        self.label_15.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">M</span></p></body></html>"))
-        self.label_16.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">1,66</span></p></body></html>"))
-        self.label_17.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">16/12/1995</span></p></body></html>"))
+        self.setSexe.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">M</span></p></body></html>"))
+        self.setTaille.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">1,66</span></p></body></html>"))
+        self.setDateNaissance.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">16/12/1995</span></p></body></html>"))
         self.label_18.setText(_translate("MainWindow", "Immmatriculation: "))
-        self.label_19.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">IVOIRIENNE</span></p></body></html>"))
-        self.label_20.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">03/02/2026</span></p></body></html>"))
+        self.setNationalite.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">IVOIRIENNE</span></p></body></html>"))
+        self.setValidite.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">03/02/2026</span></p></body></html>"))
         self.label_21.setText(_translate("MainWindow", "C 0012 6948 29"))
+        self.setLieuNaissance.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-weight:600;\">DEOULE</span></p></body></html>"))
         self.label.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:18pt; font-weight:600;\">PREVISUALISTION DE LA CARTE D\'IDENTITE</span></p></body></html>"))
-import ressources_rc
 
 
 if __name__ == "__main__":

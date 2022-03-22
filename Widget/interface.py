@@ -1,7 +1,8 @@
+from email import message
 from PyQt5.QtWidgets import QMainWindow, QApplication,QFileSystemModel,QFileDialog,QMessageBox,QTableWidgetItem
 from Widget.renseigmnement_carte_Id import Ui_MainWindow
 from PyQt5.QtGui import QPixmap
-#from email.mime.text import MIMEText
+from email.mime.text import MIMEText
 import smtplib
 import sqlite3
 
@@ -19,40 +20,36 @@ class AccountPage(QMainWindow,Ui_MainWindow):
         self.btn_delete.clicked.connect(self.delete)
         self.btn_update.clicked.connect(self.update)
         self.btn_search.clicked.connect(self.search)
-
         #self.listeEnregistrement.clicked.connect(self.listers)
         #self.buttonErase.clicked.connect(self.deleteLater)
-    # def listers(self):
-    #     connexion_db=sqlite3.connect("carto.db")
-    #     c = connexion_db.cursor()
-    #     command="""SELECT * FROM carto"""
-    #     resultat=c.execute(command)
-    #     self.tableWidget.setRowCount(0)
-    #     for row_number,row_data in enumerate(resultat):
-    #         self.tableWidget.insertRow(row_number)
-    #         for column_number,data in enumerate(row_data):
-    #             self.tableWidget.setItem(row_number,column_number,QTableWidgetItem(str(data)))
     def RecupDonnees(self):
         pass
+
+
     def Get_photo(self):
+        global photo_var
         file_name=QFileDialog.getOpenFileName(self,'Open File','Users/imac-05/Desktop')
+        photo_var=file_name[0]
         self.labPhoto.setPixmap(QPixmap(file_name[0]))
-        self.affichLienPhoto.setText(file_name[0])
-        return file_name[0]
+        #self.affichLienPhoto.setText(file_name[0])
+        return photo_var
+
     
+        
+
     def valider(self):
         
+       
+        
         if self.nom.text()=="" or self.prenom.text()=="" or self.lieu.text()=="" or self.taille.text()=="":
-            QMessageBox.about(self, "Title", "Remplissez les champs!")
+            QMessageBox.about(self, "champs", "Remplissez les champs!")
         elif self.taille.text().isalpha():
-            QMessageBox.about(self, "Title", " Taille en numerique!")
+            QMessageBox.about(self, "Taille", " Taille en numerique!")
         
         else:
-            
-            print(self.Get_photo())
 
-            connexion=sqlite3.connect("carto.db")
-            
+            connexion_validate=sqlite3.connect("carto.db")
+
             dicto={
             "nom": self.nom.text(),
             "prenom": self.prenom.text(),
@@ -62,11 +59,11 @@ class AccountPage(QMainWindow,Ui_MainWindow):
             "sexe":self.comboBoxSexe.currentText(),
             "nationalite": self.nationalite.text(),
             "validite": self.Validite.text(),
-            "photo":  self.Get_photo()
+            "photo": photo_var
         
             }
                 
-            c = connexion.cursor()
+            c = connexion_validate.cursor()
         
             #--------------creation de la table dans la base de donnees---------
             c.execute("""CREATE TABLE IF NOT EXISTS carta(
@@ -88,36 +85,38 @@ class AccountPage(QMainWindow,Ui_MainWindow):
             QMessageBox.about(self,"validate","succès d'enregistrement")
             
             #---------ajout dans la base de donnees-----
-            connexion.commit()
-            connexion.close()
-            
-       
+            connexion_validate.commit()
+            connexion_validate.close()
+
+        title="Python"
+        msg_content='<h2>{title}<font color="blue">ok</font>\n'.format(title=title)
+        message= MIMEText(msg_content,'html')
+
+        message['From']='Koue Anicet<anicetkoue@gmail.com>'
+        message['To']='anick <anicetkoue1@mgail.com>'
+        message['Subjet']='any Subject'
+
+        msg_full= message.as_string()
+        server =smtplib.SMTP('smtp.gmail.com:587')
+        server.starttls()
+        server.login('anicetkoue@gmail.com','bgnnfnggf')
+        server.sendmail('anicetkoue@gmail.com',
+                        [self.email.text()],
+                        msg_full)
+        server.quit()
+
+        #suppresion des champs de saisies
+        self.nom.clear()
+        self.prenom.clear()
+        self.dateNaissance.clear()
+        self.lieu.clear()
+        self.taille.clear()
+        self.nationalite.clear()
+        self.Validite.clear()
+        self.labPhoto.clear()
     
-   #    connexion=sqlite3.connect("carto.db")
-    #     d={
-    #         "photo": file_name.text()
-
-    #     }
-                
-    #     c = connexion.cursor()
-
-    #     #--------enregistrement des element dans la base de donnees---------- 
-    #     c.execute("INSERT INTO carta VALUES(:photo", d)
-        
-    #     #---------ajout dans la base de donnees-----
-    #     connexion.commit()
-    #     connexion.close()
+   
     def annuler(self):
-        # self.nom.deleteLater()
-        # self.prenom.deleteLater()
-        # self.lieu.deleteLater()
-        # self.taille.deleteLater()
-        # self.comboBox_jours.deleteLater()
-        # self.comboBox_mois.deleteLater()
-        # self.comboBox_annees.deleteLater()
-        # self.taille.deleteLater()
-        # self.nationalite.deleteLater()
-        # self.validite.deleteLater()
         pass
     def delete(self):
            pass 
@@ -125,6 +124,7 @@ class AccountPage(QMainWindow,Ui_MainWindow):
     def update(self):
         connexion=sqlite3.connect("carto.db") 
         c=connexion.cursor()
+
         
         nom_=str(self.nom.text())
         prenom_=self.prenom.text()
@@ -157,17 +157,18 @@ class AccountPage(QMainWindow,Ui_MainWindow):
     def search(self):
         connexion=sqlite3.connect("carto.db") 
         c=connexion.cursor()
-        nom_search=str(self.name_search.text())
+        search_name=self.name_search.text()
         
-        requete='''SELECT * FROM carta WHERE nom=?'''
-        resultat=c.execute(requete,[nom_search])
+        command='''SELECT * FROM carta WHERE nom=?'''
+        resultat=c.execute(command,[search_name])
+        self.tableWidget.setRowCount(0)
+
         for row_number,row_data in enumerate(resultat):
             self.tableWidget.insertRow(row_number)
             for column_number,data in enumerate(row_data):
                 self.tableWidget.setItem(row_number,column_number,QTableWidgetItem(str(data)))
         
-        connexion.commit()
-        connexion.close()
+        
         
     def refresh(self):
         

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1233</width>
+    <width>1231</width>
     <height>672</height>
    </rect>
   </property>
@@ -39,7 +39,7 @@ font:Arial 30 bold;
      <enum>QTabWidget::North</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <property name="iconSize">
      <size>
@@ -140,17 +140,17 @@ border-radius:9px
        <number>18</number>
       </property>
       <property name="columnCount">
-       <number>9</number>
+       <number>8</number>
       </property>
       <attribute name="horizontalHeaderCascadingSectionResizes">
        <bool>true</bool>
       </attribute>
-      <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>134</number>
-      </attribute>
       <attribute name="horizontalHeaderMinimumSectionSize">
        <number>19</number>
       </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>149</number>
+      </attribute>
       <row/>
       <row/>
       <row/>
@@ -169,27 +169,6 @@ border-radius:9px
       <row/>
       <row/>
       <row/>
-      <column>
-       <property name="text">
-        <string>ID</string>
-       </property>
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="textAlignment">
-        <set>AlignCenter</set>
-       </property>
-       <property name="background">
-        <color>
-         <red>225</red>
-         <green>0</green>
-         <blue>0</blue>
-        </color>
-       </property>
-      </column>
       <column>
        <property name="text">
         <string>NOM</string>
@@ -232,7 +211,29 @@ border-radius:9px
       </column>
       <column>
        <property name="text">
+        <string>LIEU NAISSANCE</string>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
         <string>TAILLE</string>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>SEXE</string>
        </property>
        <property name="font">
         <font>
@@ -270,43 +271,6 @@ border-radius:9px
         </color>
        </property>
       </column>
-      <column>
-       <property name="text">
-        <string>MODIFIER</string>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>13</pointsize>
-         <weight>75</weight>
-         <italic>true</italic>
-         <bold>true</bold>
-        </font>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>SUPRIMER</string>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>13</pointsize>
-         <weight>75</weight>
-         <italic>true</italic>
-         <bold>true</bold>
-        </font>
-       </property>
-      </column>
-      <item row="0" column="0">
-       <property name="text">
-        <string/>
-       </property>
-       <property name="textAlignment">
-        <set>AlignCenter</set>
-       </property>
-       <property name="flags">
-        <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
-       </property>
-      </item>
      </widget>
      <widget class="QLineEdit" name="name_search">
       <property name="geometry">
@@ -489,6 +453,9 @@ padding-left:15px;
        <property name="text">
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;Lieu de naissance&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
+       <property name="margin">
+        <number>0</number>
+       </property>
       </widget>
       <widget class="QLabel" name="label_5">
        <property name="geometry">
@@ -537,7 +504,7 @@ padding-left:15px;
       <widget class="QLabel" name="label_9">
        <property name="geometry">
         <rect>
-         <x>500</x>
+         <x>490</x>
          <y>410</y>
          <width>461</width>
          <height>31</height>
@@ -655,7 +622,7 @@ background-color:white;
        <property name="geometry">
         <rect>
          <x>1030</x>
-         <y>330</y>
+         <y>300</y>
          <width>131</width>
          <height>31</height>
         </rect>
@@ -745,7 +712,7 @@ background-color:white;
        <property name="insertPolicy">
         <enum>QComboBox::InsertAtTop</enum>
        </property>
-       <property name="placeholderText" stdset="0">
+       <property name="placeholderText">
         <string>choisir</string>
        </property>
        <item>
@@ -827,24 +794,6 @@ shadow:12px;}</string>
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:600;&quot;&gt;PRODUCTION DE CARTE NATIONALE D'IDENTITE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="affichLienPhoto">
-       <property name="geometry">
-        <rect>
-         <x>1000</x>
-         <y>300</y>
-         <width>191</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QLineEdit{
-
-border-top-right-radius:12px;
-border-top-left-radius:12px;
-background-color:white;
-}</string>
-       </property>
-      </widget>
       <widget class="QDateEdit" name="dateNaissance">
        <property name="geometry">
         <rect>
@@ -875,7 +824,7 @@ background-color:white;
       <widget class="QDateEdit" name="Validite">
        <property name="geometry">
         <rect>
-         <x>499</x>
+         <x>490</x>
          <y>440</y>
          <width>461</width>
          <height>31</height>
@@ -902,9 +851,9 @@ background-color:white;
       <widget class="QLabel" name="labPhoto">
        <property name="geometry">
         <rect>
-         <x>1030</x>
+         <x>1020</x>
          <y>100</y>
-         <width>121</width>
+         <width>141</width>
          <height>161</height>
         </rect>
        </property>
@@ -918,6 +867,63 @@ border:1px solid white;
        </property>
        <property name="scaledContents">
         <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="email">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>530</y>
+         <width>421</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit{
+border-top-left-radius:12px;
+border-top-right-radius:12px;
+background-color:white;
+}</string>
+       </property>
+       <property name="cursorPosition">
+        <number>0</number>
+       </property>
+       <property name="placeholderText">
+        <string>Entrez l'email</string>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="email_Label">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>500</y>
+         <width>421</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+font: italic 13pt &quot;Georgia&quot;;
+background-color:#5892bf;
+border-bottom-left-radius:13px;
+border-bottom-right-radius:13px;
+padding-left:15px;
+}</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;Email&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="margin">
+        <number>5</number>
+       </property>
+       <property name="indent">
+        <number>-5</number>
        </property>
       </widget>
      </widget>

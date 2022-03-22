@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1233, 672)
+        MainWindow.resize(1231, 672)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.listeEnregistrement = QtWidgets.QTabWidget(self.centralwidget)
@@ -61,22 +61,20 @@ class Ui_MainWindow(object):
         self.tableWidget.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         self.tableWidget.setGridStyle(QtCore.Qt.DotLine)
         self.tableWidget.setRowCount(18)
-        self.tableWidget.setColumnCount(9)
+        self.tableWidget.setColumnCount(8)
         self.tableWidget.setObjectName("tableWidget")
-        item = QtWidgets.QTableWidgetItem()
-        item.setTextAlignment(QtCore.Qt.AlignCenter)
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        item.setFont(font)
-        item.setBackground(QtGui.QColor(225, 0, 0))
-        self.tableWidget.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
         item.setFont(font)
         item.setBackground(QtGui.QColor(100, 218, 243))
+        self.tableWidget.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        item.setFont(font)
         self.tableWidget.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
         font = QtGui.QFont()
@@ -107,30 +105,16 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         item.setFont(font)
-        item.setBackground(QtGui.QColor(112, 238, 160))
         self.tableWidget.setHorizontalHeaderItem(6, item)
         item = QtWidgets.QTableWidgetItem()
         font = QtGui.QFont()
-        font.setPointSize(13)
         font.setBold(True)
-        font.setItalic(True)
         font.setWeight(75)
         item.setFont(font)
+        item.setBackground(QtGui.QColor(112, 238, 160))
         self.tableWidget.setHorizontalHeaderItem(7, item)
-        item = QtWidgets.QTableWidgetItem()
-        font = QtGui.QFont()
-        font.setPointSize(13)
-        font.setBold(True)
-        font.setItalic(True)
-        font.setWeight(75)
-        item.setFont(font)
-        self.tableWidget.setHorizontalHeaderItem(8, item)
-        item = QtWidgets.QTableWidgetItem()
-        item.setTextAlignment(QtCore.Qt.AlignCenter)
-        item.setFlags(QtCore.Qt.ItemIsSelectable|QtCore.Qt.ItemIsDragEnabled|QtCore.Qt.ItemIsDropEnabled|QtCore.Qt.ItemIsUserCheckable|QtCore.Qt.ItemIsEnabled)
-        self.tableWidget.setItem(0, 0, item)
         self.tableWidget.horizontalHeader().setCascadingSectionResizes(True)
-        self.tableWidget.horizontalHeader().setDefaultSectionSize(134)
+        self.tableWidget.horizontalHeader().setDefaultSectionSize(149)
         self.tableWidget.horizontalHeader().setMinimumSectionSize(19)
         self.name_search = QtWidgets.QLineEdit(self.tab_2)
         self.name_search.setGeometry(QtCore.QRect(570, 20, 261, 41))
@@ -279,7 +263,7 @@ class Ui_MainWindow(object):
         self.taille.setClearButtonEnabled(True)
         self.taille.setObjectName("taille")
         self.btn_photo = QtWidgets.QPushButton(self.frame)
-        self.btn_photo.setGeometry(QtCore.QRect(1030, 330, 131, 31))
+        self.btn_photo.setGeometry(QtCore.QRect(1030, 300, 131, 31))
         self.btn_photo.setStyleSheet("QPushButton{\n"
 "background-color:lightgreen;\n"
 "color:white;\n"
@@ -346,15 +330,6 @@ class Ui_MainWindow(object):
 "color:red;\n"
 "shadow:12px;}")
         self.label_7.setObjectName("label_7")
-        self.affichLienPhoto = QtWidgets.QLineEdit(self.frame)
-        self.affichLienPhoto.setGeometry(QtCore.QRect(1000, 300, 191, 31))
-        self.affichLienPhoto.setStyleSheet("QLineEdit{\n"
-"\n"
-"border-top-right-radius:12px;\n"
-"border-top-left-radius:12px;\n"
-"background-color:white;\n"
-"}")
-        self.affichLienPhoto.setObjectName("affichLienPhoto")
         self.dateNaissance = QtWidgets.QDateEdit(self.frame)
         self.dateNaissance.setGeometry(QtCore.QRect(50, 330, 421, 31))
         self.dateNaissance.setStyleSheet("QDateEdit{\n"
@@ -376,12 +351,34 @@ class Ui_MainWindow(object):
         self.Validite.setDate(QtCore.QDate(2022, 3, 18))
         self.Validite.setObjectName("Validite")
         self.labPhoto = QtWidgets.QLabel(self.frame)
-        self.labPhoto.setGeometry(QtCore.QRect(1030, 100, 121, 161))
+        self.labPhoto.setGeometry(QtCore.QRect(1020, 100, 141, 161))
         self.labPhoto.setStyleSheet("QLabel{\n"
 "border:1px solid white;\n"
 "}")
         self.labPhoto.setScaledContents(True)
         self.labPhoto.setObjectName("labPhoto")
+        self.email = QtWidgets.QLineEdit(self.frame)
+        self.email.setGeometry(QtCore.QRect(50, 530, 421, 31))
+        self.email.setAutoFillBackground(False)
+        self.email.setStyleSheet("QLineEdit{\n"
+"border-top-left-radius:12px;\n"
+"border-top-right-radius:12px;\n"
+"background-color:white;\n"
+"}")
+        self.email.setCursorPosition(0)
+        self.email.setClearButtonEnabled(True)
+        self.email.setObjectName("email")
+        self.email_Label = QtWidgets.QLabel(self.frame)
+        self.email_Label.setGeometry(QtCore.QRect(50, 500, 421, 31))
+        self.email_Label.setStyleSheet("QLabel{\n"
+"font: italic 13pt \"Georgia\";\n"
+"background-color:#5892bf;\n"
+"border-bottom-left-radius:13px;\n"
+"border-bottom-right-radius:13px;\n"
+"padding-left:15px;\n"
+"}")
+        self.email_Label.setIndent(-5)
+        self.email_Label.setObjectName("email_Label")
         self.listeEnregistrement.addTab(self.tab, "")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -389,7 +386,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.listeEnregistrement.setCurrentIndex(0)
+        self.listeEnregistrement.setCurrentIndex(1)
         self.comboBoxSexe.setCurrentIndex(0)
         self.btn_annuler.clicked.connect(self.nationalite.clear) # type: ignore
         self.btn_annuler.clicked.connect(self.lieu.clear) # type: ignore
@@ -405,26 +402,21 @@ class Ui_MainWindow(object):
         self.btn_update.setText(_translate("MainWindow", "MODIFIER"))
         self.tableWidget.setSortingEnabled(False)
         item = self.tableWidget.horizontalHeaderItem(0)
-        item.setText(_translate("MainWindow", "ID"))
-        item = self.tableWidget.horizontalHeaderItem(1)
         item.setText(_translate("MainWindow", "NOM"))
-        item = self.tableWidget.horizontalHeaderItem(2)
+        item = self.tableWidget.horizontalHeaderItem(1)
         item.setText(_translate("MainWindow", "PRENOM"))
-        item = self.tableWidget.horizontalHeaderItem(3)
+        item = self.tableWidget.horizontalHeaderItem(2)
         item.setText(_translate("MainWindow", "DATE NAISSANCE"))
+        item = self.tableWidget.horizontalHeaderItem(3)
+        item.setText(_translate("MainWindow", "LIEU NAISSANCE"))
         item = self.tableWidget.horizontalHeaderItem(4)
         item.setText(_translate("MainWindow", "TAILLE"))
         item = self.tableWidget.horizontalHeaderItem(5)
-        item.setText(_translate("MainWindow", "NATIONALITE"))
+        item.setText(_translate("MainWindow", "SEXE"))
         item = self.tableWidget.horizontalHeaderItem(6)
-        item.setText(_translate("MainWindow", "VALIDITE"))
+        item.setText(_translate("MainWindow", "NATIONALITE"))
         item = self.tableWidget.horizontalHeaderItem(7)
-        item.setText(_translate("MainWindow", "MODIFIER"))
-        item = self.tableWidget.horizontalHeaderItem(8)
-        item.setText(_translate("MainWindow", "SUPRIMER"))
-        __sortingEnabled = self.tableWidget.isSortingEnabled()
-        self.tableWidget.setSortingEnabled(False)
-        self.tableWidget.setSortingEnabled(__sortingEnabled)
+        item.setText(_translate("MainWindow", "VALIDITE"))
         self.name_search.setPlaceholderText(_translate("MainWindow", "Ajouter un element "))
         self.btn_search.setText(_translate("MainWindow", "search"))
         self.btn_refresh.setText(_translate("MainWindow", "rafraichie"))
@@ -444,7 +436,7 @@ class Ui_MainWindow(object):
         self.btn_annuler.setText(_translate("MainWindow", "Annuler"))
         self.btn_valider1.setText(_translate("MainWindow", "Valider"))
         self.comboBoxSexe.setCurrentText(_translate("MainWindow", "Masculin"))
-        self.comboBoxSexe.setProperty("placeholderText", _translate("MainWindow", "choisir"))
+        self.comboBoxSexe.setPlaceholderText(_translate("MainWindow", "choisir"))
         self.comboBoxSexe.setItemText(0, _translate("MainWindow", "Masculin"))
         self.comboBoxSexe.setItemText(1, _translate("MainWindow", "Feminin"))
         self.comboBoxSexe.setItemText(2, _translate("MainWindow", "Autre"))
@@ -452,6 +444,8 @@ class Ui_MainWindow(object):
         self.nationalite.setPlaceholderText(_translate("MainWindow", "Entrez la nationalité"))
         self.label_7.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:24pt; font-weight:600;\">PRODUCTION DE CARTE NATIONALE D\'IDENTITE</span></p></body></html>"))
         self.labPhoto.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">Photo</p></body></html>"))
+        self.email.setPlaceholderText(_translate("MainWindow", "Entrez l\'email"))
+        self.email_Label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:18pt; font-weight:600;\">Email</span></p><p><br/></p></body></html>"))
         self.listeEnregistrement.setTabText(self.listeEnregistrement.indexOf(self.tab), _translate("MainWindow", "enregistrement"))
 
 
