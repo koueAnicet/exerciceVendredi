@@ -494,7 +494,7 @@ padding-left:15px;
        <property name="geometry">
         <rect>
          <x>490</x>
-         <y>200</y>
+         <y>210</y>
          <width>461</width>
          <height>31</height>
         </rect>
@@ -926,9 +926,7 @@ border:1px solid white;
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources>
-  <include location="ressources.qrc"/>
- </resources>
+ <resources/>
  <connections>
   <connection>
    <sender>btn_annuler</sender>

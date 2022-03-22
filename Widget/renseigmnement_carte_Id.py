@@ -212,7 +212,7 @@ class Ui_MainWindow(object):
 "}")
         self.label_4.setObjectName("label_4")
         self.label_5 = QtWidgets.QLabel(self.frame)
-        self.label_5.setGeometry(QtCore.QRect(490, 200, 461, 31))
+        self.label_5.setGeometry(QtCore.QRect(490, 210, 461, 31))
         self.label_5.setStyleSheet("QLabel{\n"
 "font: italic 13pt \"Georgia\";\n"
 "background-color:#5892bf;\n"
@@ -453,7 +453,6 @@ class Ui_MainWindow(object):
         self.label_7.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:24pt; font-weight:600;\">PRODUCTION DE CARTE NATIONALE D\'IDENTITE</span></p></body></html>"))
         self.labPhoto.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">Photo</p></body></html>"))
         self.listeEnregistrement.setTabText(self.listeEnregistrement.indexOf(self.tab), _translate("MainWindow", "enregistrement"))
-import ressources_rc
 
 
 if __name__ == "__main__":

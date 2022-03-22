@@ -13,6 +13,7 @@ class AccountPage(QMainWindow,Ui_MainWindow):
         self.setupUi(self)
 
         self.btn_valider1.clicked.connect(self.valider)
+        self.btn_refresh.clicked.connect(self.refresh)
         self.btn_photo.clicked.connect(self.Get_photo)
         self.btn_annuler.clicked.connect(self.annuler)
         self.btn_delete.clicked.connect(self.delete)
@@ -55,11 +56,11 @@ class AccountPage(QMainWindow,Ui_MainWindow):
             dicto={
             "nom": self.nom.text(),
             "prenom": self.prenom.text(),
-            "lieu_naissance": self.lieu.text(),
             "date_naissance": self.dateNaissance.text(),
+            "lieu_naissance": self.lieu.text(),
             "taille": self.taille.text(),
-            "nationalite": self.nationalite.text(),
             "sexe":self.comboBoxSexe.currentText(),
+            "nationalite": self.nationalite.text(),
             "validite": self.Validite.text(),
             "photo":  vv
         
@@ -75,6 +76,7 @@ class AccountPage(QMainWindow,Ui_MainWindow):
                 date_naissance text,
                 taille text,
                 sexe text,
+                nationalite text,
                 validite text,
                 photo text
                 
@@ -82,7 +84,7 @@ class AccountPage(QMainWindow,Ui_MainWindow):
 
 
             #--------enregistrement des element dans la base de donnees---------- 
-            c.execute("INSERT INTO carta VALUES(:nom, :prenom, :lieu_naissance, :date_naissance, :taille, :sexe, :validite, :photo)", dicto)
+            c.execute("INSERT INTO carta VALUES(:nom, :prenom, :date_naissance, :lieu_naissance,  :taille, :sexe, :nationalie, :validite, :photo)", dicto)
             
             #---------ajout dans la base de donnees-----
             connexion.commit()
@@ -125,15 +127,15 @@ class AccountPage(QMainWindow,Ui_MainWindow):
         
         nom_=str(self.nom.text())
         prenom_=self.prenom.text()
-        dateNaissance_=self.dateNaissance.text()
-        lieu_=self.lieu.text()
+        date_naissance_=self.dateNaissance.text()
+        lieu_naissance_=self.lieu.text()
         taille_=self.taille.text()
-        comboBoxSexe_=self.comboBoxSexe.currentText()
+        sexe_=self.comboBoxSexe.currentText()
         nationalite_=self.nationalite.text()
         validite_=self.Validite.text()
         
-        row=(nom_,prenom_,dateNaissance_,lieu_,taille_,comboBoxSexe_,nationalite_,validite_)
-        command=''' UPDATE carta  SET prenom_=?,dateNaissance_=?,lieu_,taille_=?,comboBoxSexe_=?,nationalite_=?,validite_=? WHERE nom=nom_'''
+        row=(nom_,prenom_,date_naissance_,lieu_naissance_,taille_,sexe_,nationalite_,validite_)
+        command=''' UPDATE carta  SET prenom_=?,date_naissance_=?,lieu_naissance_,taille_=?,sexe=?,nationalite_=?,validite_=? WHERE nom=nom_'''
         c.execute(command,row)
         
         
@@ -170,7 +172,7 @@ class AccountPage(QMainWindow,Ui_MainWindow):
         
         connexion_db=sqlite3.connect("carto.db")
         c = connexion_db.cursor()
-        command="""SELECT * FROM carta"""
+        command="""SELECT nom,prenom,date_naissance,lieu_naissance,taille,sexe,nationlite,validite FROM carta"""
         resultat=c.execute(command)
         self.tableWidget.setRowCount(0)
         for row_number,row_data in enumerate(resultat):
