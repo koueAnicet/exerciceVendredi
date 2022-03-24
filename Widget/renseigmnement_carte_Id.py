@@ -14,11 +14,11 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1231, 672)
+        MainWindow.resize(1230, 672)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.listeEnregistrement = QtWidgets.QTabWidget(self.centralwidget)
-        self.listeEnregistrement.setGeometry(QtCore.QRect(0, 0, 1241, 661))
+        self.listeEnregistrement.setGeometry(QtCore.QRect(0, 0, 1221, 661))
         self.listeEnregistrement.setMinimumSize(QtCore.QSize(0, 0))
         self.listeEnregistrement.setStyleSheet("background-color:lightblue;\n"
 "font:Arial 30 bold;\n"
@@ -48,7 +48,7 @@ class Ui_MainWindow(object):
 "}")
         self.btn_update.setObjectName("btn_update")
         self.tableWidget = QtWidgets.QTableWidget(self.tab_2)
-        self.tableWidget.setGeometry(QtCore.QRect(0, 70, 1231, 561))
+        self.tableWidget.setGeometry(QtCore.QRect(0, 70, 1261, 561))
         self.tableWidget.setAutoFillBackground(True)
         self.tableWidget.setStyleSheet("background-color: lightgrey;\n"
 "")
@@ -60,7 +60,7 @@ class Ui_MainWindow(object):
         self.tableWidget.setSelectionMode(QtWidgets.QAbstractItemView.ContiguousSelection)
         self.tableWidget.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         self.tableWidget.setGridStyle(QtCore.Qt.DotLine)
-        self.tableWidget.setRowCount(18)
+        self.tableWidget.setRowCount(21)
         self.tableWidget.setColumnCount(8)
         self.tableWidget.setObjectName("tableWidget")
         item = QtWidgets.QTableWidgetItem()
@@ -216,7 +216,7 @@ class Ui_MainWindow(object):
 "}")
         self.label_6.setObjectName("label_6")
         self.label_9 = QtWidgets.QLabel(self.frame)
-        self.label_9.setGeometry(QtCore.QRect(500, 410, 461, 31))
+        self.label_9.setGeometry(QtCore.QRect(490, 410, 461, 31))
         self.label_9.setStyleSheet("QLabel{\n"
 "font: italic 13pt \"Georgia\";\n"
 "background-color:#5892bf;\n"
@@ -263,13 +263,12 @@ class Ui_MainWindow(object):
         self.taille.setClearButtonEnabled(True)
         self.taille.setObjectName("taille")
         self.btn_photo = QtWidgets.QPushButton(self.frame)
-        self.btn_photo.setGeometry(QtCore.QRect(1030, 300, 131, 31))
+        self.btn_photo.setGeometry(QtCore.QRect(1020, 300, 141, 31))
         self.btn_photo.setStyleSheet("QPushButton{\n"
 "background-color:lightgreen;\n"
 "color:white;\n"
 "font:Italic 14 bold;\n"
 "border:2px solid white;\n"
-"border-radius:12px;\n"
 "}")
         self.btn_photo.setObjectName("btn_photo")
         self.btn_annuler = QtWidgets.QPushButton(self.frame)
@@ -281,9 +280,12 @@ class Ui_MainWindow(object):
 "border:2px solid white;\n"
 "border-radius:12px;\n"
 "}")
+        self.btn_annuler.setAutoRepeatDelay(300)
+        self.btn_annuler.setAutoRepeatInterval(100)
         self.btn_annuler.setObjectName("btn_annuler")
         self.btn_valider1 = QtWidgets.QPushButton(self.frame)
         self.btn_valider1.setGeometry(QtCore.QRect(750, 540, 151, 31))
+        self.btn_valider1.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         self.btn_valider1.setStyleSheet("QPushButton{\n"
 "background-color:#30ff98;\n"
 "color:white;\n"
@@ -341,14 +343,19 @@ class Ui_MainWindow(object):
         self.dateNaissance.setDate(QtCore.QDate(2022, 3, 18))
         self.dateNaissance.setObjectName("dateNaissance")
         self.Validite = QtWidgets.QDateEdit(self.frame)
-        self.Validite.setGeometry(QtCore.QRect(499, 440, 461, 31))
+        self.Validite.setGeometry(QtCore.QRect(490, 440, 461, 31))
+        self.Validite.setCursor(QtGui.QCursor(QtCore.Qt.OpenHandCursor))
+        self.Validite.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.Validite.setAutoFillBackground(False)
         self.Validite.setStyleSheet("QDateEdit{\n"
 "border-top-left-radius:12px;\n"
 "border-top-right-radius:12px;\n"
 "background-color:white;\n"
 "}")
+        self.Validite.setSpecialValueText("")
+        self.Validite.setProperty("showGroupSeparator", True)
         self.Validite.setCalendarPopup(True)
-        self.Validite.setDate(QtCore.QDate(2022, 3, 18))
+        self.Validite.setTimeSpec(QtCore.Qt.UTC)
         self.Validite.setObjectName("Validite")
         self.labPhoto = QtWidgets.QLabel(self.frame)
         self.labPhoto.setGeometry(QtCore.QRect(1020, 100, 141, 161))
@@ -365,6 +372,7 @@ class Ui_MainWindow(object):
 "border-top-right-radius:12px;\n"
 "background-color:white;\n"
 "}")
+        self.email.setEchoMode(QtWidgets.QLineEdit.Normal)
         self.email.setCursorPosition(0)
         self.email.setClearButtonEnabled(True)
         self.email.setObjectName("email")
@@ -386,7 +394,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.listeEnregistrement.setCurrentIndex(1)
+        self.listeEnregistrement.setCurrentIndex(0)
         self.comboBoxSexe.setCurrentIndex(0)
         self.btn_annuler.clicked.connect(self.nationalite.clear) # type: ignore
         self.btn_annuler.clicked.connect(self.lieu.clear) # type: ignore

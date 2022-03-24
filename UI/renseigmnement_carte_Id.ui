@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1231</width>
+    <width>1230</width>
     <height>672</height>
    </rect>
   </property>
@@ -19,7 +19,7 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1241</width>
+      <width>1221</width>
       <height>661</height>
      </rect>
     </property>
@@ -98,7 +98,7 @@ border-radius:9px
        <rect>
         <x>0</x>
         <y>70</y>
-        <width>1231</width>
+        <width>1261</width>
         <height>561</height>
        </rect>
       </property>
@@ -137,7 +137,7 @@ border-radius:9px
        <bool>false</bool>
       </property>
       <property name="rowCount">
-       <number>18</number>
+       <number>21</number>
       </property>
       <property name="columnCount">
        <number>8</number>
@@ -151,6 +151,9 @@ border-radius:9px
       <attribute name="horizontalHeaderDefaultSectionSize">
        <number>149</number>
       </attribute>
+      <row/>
+      <row/>
+      <row/>
       <row/>
       <row/>
       <row/>
@@ -621,9 +624,9 @@ background-color:white;
       <widget class="QPushButton" name="btn_photo">
        <property name="geometry">
         <rect>
-         <x>1030</x>
+         <x>1020</x>
          <y>300</y>
-         <width>131</width>
+         <width>141</width>
          <height>31</height>
         </rect>
        </property>
@@ -633,7 +636,6 @@ background-color:lightgreen;
 color:white;
 font:Italic 14 bold;
 border:2px solid white;
-border-radius:12px;
 }</string>
        </property>
        <property name="text">
@@ -661,6 +663,12 @@ border-radius:12px;
        <property name="text">
         <string>Annuler</string>
        </property>
+       <property name="autoRepeatDelay">
+        <number>300</number>
+       </property>
+       <property name="autoRepeatInterval">
+        <number>100</number>
+       </property>
       </widget>
       <widget class="QPushButton" name="btn_valider1">
        <property name="geometry">
@@ -670,6 +678,9 @@ border-radius:12px;
          <width>151</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>ArrowCursor</cursorShape>
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
@@ -830,6 +841,15 @@ background-color:white;
          <height>31</height>
         </rect>
        </property>
+       <property name="cursor">
+        <cursorShape>OpenHandCursor</cursorShape>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
        <property name="styleSheet">
         <string notr="true">QDateEdit{
 border-top-left-radius:12px;
@@ -837,15 +857,17 @@ border-top-right-radius:12px;
 background-color:white;
 }</string>
        </property>
+       <property name="specialValueText">
+        <string/>
+       </property>
+       <property name="showGroupSeparator" stdset="0">
+        <bool>true</bool>
+       </property>
        <property name="calendarPopup">
         <bool>true</bool>
        </property>
-       <property name="date">
-        <date>
-         <year>2022</year>
-         <month>3</month>
-         <day>18</day>
-        </date>
+       <property name="timeSpec">
+        <enum>Qt::UTC</enum>
        </property>
       </widget>
       <widget class="QLabel" name="labPhoto">
@@ -887,6 +909,9 @@ border-top-left-radius:12px;
 border-top-right-radius:12px;
 background-color:white;
 }</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
        </property>
        <property name="cursorPosition">
         <number>0</number>

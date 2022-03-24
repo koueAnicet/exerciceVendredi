@@ -212,20 +212,20 @@ class Ui_MainWindow(object):
         self.label = QtWidgets.QLabel(self.frame)
         self.label.setGeometry(QtCore.QRect(250, 20, 541, 31))
         self.label.setObjectName("label")
-        self.pushButton = QtWidgets.QPushButton(self.frame)
-        self.pushButton.setGeometry(QtCore.QRect(530, 470, 61, 61))
-        self.pushButton.setStyleSheet("QPushButton{\n"
+        self.btn_voirPhoto = QtWidgets.QPushButton(self.frame)
+        self.btn_voirPhoto.setGeometry(QtCore.QRect(530, 470, 61, 61))
+        self.btn_voirPhoto.setStyleSheet("QPushButton{\n"
 "background-color:black;\n"
 "color:white;\n"
 "font:Italic 16 bold;\n"
 "border-radius:20px\n"
 "}")
-        self.pushButton.setText("")
+        self.btn_voirPhoto.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/img/imgCapture.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton.setIcon(icon)
-        self.pushButton.setIconSize(QtCore.QSize(100, 100))
-        self.pushButton.setObjectName("pushButton")
+        self.btn_voirPhoto.setIcon(icon)
+        self.btn_voirPhoto.setIconSize(QtCore.QSize(100, 100))
+        self.btn_voirPhoto.setObjectName("btn_voirPhoto")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")

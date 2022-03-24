@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QMainWindow, QApplication
-from Widget.interface import AccountPage
+from Widget.interfaceVisual import AccountPage
 
 
 def main():

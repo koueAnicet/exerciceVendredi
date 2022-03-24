@@ -9,7 +9,7 @@ class AccountPage(QMainWindow,Ui_MainWindow):
     def __init__(self):
         super(AccountPage, self).__init__()
         self.setupUi(self)
-        
+        self.btn_voirPhoto.clicked.connect(self.requete) 
 
     def requete(self):
         #connexion a la base de donnees
@@ -17,10 +17,18 @@ class AccountPage(QMainWindow,Ui_MainWindow):
 
         #positio de du cursor
         c=conn.cursor()
-
-        command="""SELECT nom,prenom,date_naissance,lieu_naissance,taille,sexe,nationalite,validite FROM carta"""
-        resultat = c.execute(command)
-    
-
-        self.setNom.setT()
-
+        
+        command="""SELECT nom,prenom,date_naissance,lieu_naissance,taille,sexe,nationalite,email,photo FROM carta WHERE nom='koue'"""
+        v=c.execute(command)
+        for i in v:
+            print(i[0])
+            
+        
+        self.setNom.setText(i[0])
+        self.setPrenom.setText(i[1])
+        self.setLieuNaissance.setText(i[2])
+        self.setDateNaissance.setText(i[3])
+        self.setTaille.setText(i[4])
+        self.setSexe.setText(i[5])
+        self.setNationalite.setText(i[6])
+        self.setPhotoLabel.setPixmap(QPixmap(i[8]))
