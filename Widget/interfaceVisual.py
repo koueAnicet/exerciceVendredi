@@ -24,11 +24,11 @@ class AccountPage(QMainWindow,Ui_MainWindow):
             print(i[0])
             
         
-        self.setNom.setText(i[0])
-        self.setPrenom.setText(i[1])
-        self.setLieuNaissance.setText(i[2])
+        self.setNom.setText(i[0].upper())
+        self.setPrenom.setText(i[1].upper())
+        self.setLieuNaissance.setText(i[2].upper())
         self.setDateNaissance.setText(i[3])
         self.setTaille.setText(i[4])
-        self.setSexe.setText(i[5])
-        self.setNationalite.setText(i[6])
+        self.setSexe.setText(i[5].upper())
+        self.setNationalite.setText(i[6].upper())
         self.setPhotoLabel.setPixmap(QPixmap(i[8]))

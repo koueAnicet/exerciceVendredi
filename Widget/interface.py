@@ -36,7 +36,7 @@ class AccountPage(QMainWindow,Ui_MainWindow):
         
         else:
 
-            connexion_validate=sqlite3.connect("carto.db")
+           
 
             dicto={
             "nom": self.nom.text(),
@@ -51,7 +51,8 @@ class AccountPage(QMainWindow,Ui_MainWindow):
             
         
             }
-                
+            #-----------------------------connexion--------------------
+            connexion_validate=sqlite3.connect("carto.db")    
             c = connexion_validate.cursor()
         
             #--------------creation de la table dans la base de donnees---------
